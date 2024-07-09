@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://e-commerce-mern54.vercel.app",
+  "proxy": "https://new-mern-six.vercel.app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
