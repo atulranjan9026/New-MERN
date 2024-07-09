@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Layout from "./../../components/Layout/Layout.js";
-import AdminMenu from "./../../components/Layout/AdminMenu.js";
+import Layout from "../../components/Layout/Layout.js";
+import AdminMenu from "../../components/Layout/AdminMenu.js";
 import toast from "react-hot-toast";
 import axios from "../../hooks/axios.js";
 import CategoryForm from "../../components/Form/CategoryForm.js";

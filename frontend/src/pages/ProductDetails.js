@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout/Layout.js";
+import Layout from "../components/Layout/Layout.js";
 import axios from "../hooks/axios.js";
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart.js";

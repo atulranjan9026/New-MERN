@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import UserMenu from "../../components/Layout/UserMenu.js";
-import Layout from "./../../components/Layout/Layout.js";
+import Layout from "../../components/Layout/Layout.js";
 import { useAuth } from "../../context/auth.jsx";
 import toast from "react-hot-toast";
 import axios from "../../hooks/axios.js";

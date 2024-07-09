@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./../components/Layout/Layout.js";
+import Layout from "../components/Layout/Layout.js";
 import { useCart } from "../context/cart.js";
 import { useSearch } from "../context/search.js";
 import toast from "react-hot-toast";
