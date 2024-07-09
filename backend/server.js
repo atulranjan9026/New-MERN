@@ -31,6 +31,15 @@ const __dirname = path.dirname(__filename);
 // Serve static files from the 'build' directory
 app.use(express.static(path.join(__dirname, '../client/build')));
 
+// Middleware to set Content Security Policy headers
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'none'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com"
+  );
+  next();
+});
+
 // API routes
 app.use('/api/v1/auth', authRoutes);
 app.use('/api/v1/category', categoryRoutes);
@@ -39,19 +48,6 @@ app.use('/api/v1/product', productRoutes);
 // Catch-all handler to send back React's index.html file for any other requests
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
-
-app.get("/new",(req, res)=>{
-  res.send("Hello World")
-})
-
-// Middleware to set Content Security Policy headers
-app.use((req, res, next) => {
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'none'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com"
-  );
-  next();
 });
 
 // Define PORT
