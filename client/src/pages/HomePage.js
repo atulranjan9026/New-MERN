@@ -159,7 +159,7 @@ const HomePage = () => {
             {products?.map((product) => (
               <div className="card m-2" key={product._id}>
                 <img
-                  src={`http://localhost:8080/api/v1/product/product-photo/${product._id}`}
+                  src={`https://new-mern-six.vercel.app/api/v1/product/product-photo/${product._id}`}
                   className="card-img-top"
                   alt={product.name}
                 />
