@@ -44,6 +44,16 @@ app.get('*', (req, res) => {
 app.get("/new",(req, res)=>{
   res.send("Hello World")
 })
+
+// Middleware to set Content Security Policy headers
+app.use((req, res, next) => {
+  res.setHeader(
+    "Content-Security-Policy",
+    "default-src 'none'; font-src 'self' https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com"
+  );
+  next();
+});
+
 // Define PORT
 const PORT = process.env.PORT || 7080;
 
